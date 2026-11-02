@@ -1,0 +1,6 @@
+data/raw/
+funnel.duckdb
+funnel.duckdb.wal
+.ipynb_checkpoints/
+__pycache__/
+.venv/
