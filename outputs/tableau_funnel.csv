@@ -1,0 +1,113 @@
+category,price_tier,buyer_type,carted,purchased,no_cart_purchases,abandoned_value,purchased_value,tier
+accessories,1,First-time,15,4,25,127.57,43.47,Q1 budget
+accessories,1,Returning,12,5,17,80.25,60.85,Q1 budget
+accessories,2,First-time,7,3,19,183.84,114.33,Q2
+accessories,2,Returning,4,1,26,109.24,36.01,Q2
+accessories,3,First-time,1,0,13,59.18,,Q3
+accessories,3,Returning,0,0,9,,,Q3
+accessories,4,First-time,6,0,10,1220.57,,Q4 premium
+accessories,4,Returning,0,0,11,,,Q4 premium
+apparel,1,First-time,1,0,23,8.73,,Q1 budget
+apparel,1,Returning,0,0,60,,,Q1 budget
+apparel,2,First-time,0,0,109,,,Q2
+apparel,2,Returning,0,0,149,,,Q2
+apparel,3,First-time,0,0,114,,,Q3
+apparel,3,Returning,0,0,100,,,Q3
+apparel,4,First-time,0,0,79,,,Q4 premium
+apparel,4,Returning,0,0,88,,,Q4 premium
+appliances,1,First-time,1005,367,819,23615.3,13636.77,Q1 budget
+appliances,1,Returning,486,295,570,6575.51,10204.53,Q1 budget
+appliances,2,First-time,1199,491,737,69636.37,48298.85,Q2
+appliances,2,Returning,516,360,435,14675.67,35973.59,Q2
+appliances,3,First-time,1333,457,760,229050.03,116988.02,Q3
+appliances,3,Returning,479,299,514,44694.9,75255.47,Q3
+appliances,4,First-time,696,227,279,245796.62,111843.24,Q4 premium
+appliances,4,Returning,256,149,204,58856.76,76190.18,Q4 premium
+auto,1,First-time,85,29,162,3130.06,1846.94,Q1 budget
+auto,1,Returning,31,21,132,603.28,1113.87,Q1 budget
+auto,2,First-time,207,77,141,15451.58,9378.3,Q2
+auto,2,Returning,94,56,105,4532.42,6750.43,Q2
+auto,3,First-time,115,43,83,11779.72,6665.73,Q3
+auto,3,Returning,56,43,56,1973.07,6581.06,Q3
+auto,4,First-time,12,4,41,2602.52,1646.58,Q4 premium
+auto,4,Returning,14,9,45,1451.21,3245.1,Q4 premium
+computers,1,First-time,112,32,116,2197.95,924.94,Q1 budget
+computers,1,Returning,60,33,100,571.13,754.87,Q1 budget
+computers,2,First-time,204,56,140,15735.22,5864.69,Q2
+computers,2,Returning,92,61,147,2892.28,6396.87,Q2
+computers,3,First-time,484,171,414,98048.84,52497.82,Q3
+computers,3,Returning,217,141,425,23652.4,43073.38,Q3
+computers,4,First-time,431,137,214,248376.36,110672.42,Q4 premium
+computers,4,Returning,269,205,308,56489.17,169450.96,Q4 premium
+construction,1,First-time,111,44,78,2761.65,1970.36,Q1 budget
+construction,1,Returning,56,35,54,806.66,1302.35,Q1 budget
+construction,2,First-time,214,71,108,12885.71,6345.31,Q2
+construction,2,Returning,111,66,64,4044.36,5997.88,Q2
+construction,3,First-time,78,28,61,8532.37,4698.74,Q3
+construction,3,Returning,42,24,44,2881.12,3930.46,Q3
+construction,4,First-time,19,4,21,6009.13,1949.23,Q4 premium
+construction,4,Returning,14,7,10,2770.28,3221.99,Q4 premium
+country_yard,1,First-time,3,3,2,,316.78,Q1 budget
+country_yard,1,Returning,1,1,0,,102.37,Q1 budget
+country_yard,2,First-time,1,0,0,132.58,,Q2
+country_yard,2,Returning,0,0,0,,,Q2
+country_yard,3,First-time,2,1,4,297.54,297.54,Q3
+country_yard,3,Returning,0,0,1,,,Q3
+country_yard,4,First-time,0,0,0,,,Q4 premium
+country_yard,4,Returning,0,0,0,,,Q4 premium
+electronics,1,First-time,969,304,649,18074.52,9040.5,Q1 budget
+electronics,1,Returning,433,250,546,5016.14,7650.4,Q1 budget
+electronics,2,First-time,5329,2469,1245,341629.58,305149.31,Q2
+electronics,2,Returning,2979,2253,1031,85049.78,274236.6,Q2
+electronics,3,First-time,11146,4809,2718,1368430.74,1040880.41,Q3
+electronics,3,Returning,5828,4316,2505,326166.66,928184.81,Q3
+electronics,4,First-time,9973,4079,2817,4677928.09,3164463.78,Q4 premium
+electronics,4,Returning,6235,4573,3777,1329747.78,3570237.02,Q4 premium
+furniture,1,First-time,41,8,99,1231.27,291.48,Q1 budget
+furniture,1,Returning,28,14,70,501.83,457.03,Q1 budget
+furniture,2,First-time,43,12,128,4175.7,1566.33,Q2
+furniture,2,Returning,9,8,109,136.4,1029.55,Q2
+furniture,3,First-time,19,7,101,2145.28,1661.17,Q3
+furniture,3,Returning,10,8,67,437.33,1577.24,Q3
+furniture,4,First-time,1,0,86,442.74,,Q4 premium
+furniture,4,Returning,0,0,87,,,Q4 premium
+kids,1,First-time,11,1,36,116.79,13.62,Q1 budget
+kids,1,Returning,6,2,34,58.07,19.12,Q1 budget
+kids,2,First-time,22,5,50,493.27,134.99,Q2
+kids,2,Returning,12,7,37,155.61,167.17,Q2
+kids,3,First-time,39,7,112,2697.73,572.16,Q3
+kids,3,Returning,16,8,75,750.59,751.96,Q3
+kids,4,First-time,38,8,28,11223.65,2747.17,Q4 premium
+kids,4,Returning,9,8,39,368.86,2478.03,Q4 premium
+medicine,1,First-time,3,1,7,66.88,33.44,Q1 budget
+medicine,1,Returning,2,2,5,,60.06,Q1 budget
+medicine,2,First-time,4,3,5,47.62,136.13,Q2
+medicine,2,Returning,5,2,6,129.13,81.57,Q2
+medicine,3,First-time,5,2,0,169.85,142.32,Q3
+medicine,3,Returning,1,0,1,72.05,,Q3
+medicine,4,First-time,0,0,0,,,Q4 premium
+medicine,4,Returning,0,0,0,,,Q4 premium
+sport,1,First-time,19,3,20,1550.04,277.18,Q1 budget
+sport,1,Returning,10,6,10,281.57,687.64,Q1 budget
+sport,2,First-time,30,3,17,5503.36,592.48,Q2
+sport,2,Returning,10,4,12,1281.39,746.52,Q2
+sport,3,First-time,7,2,18,1946.17,731.5,Q3
+sport,3,Returning,2,0,6,731.5,,Q3
+sport,4,First-time,1,0,6,476.43,,Q4 premium
+sport,4,Returning,0,0,0,,,Q4 premium
+stationery,1,First-time,2,2,1,,9.73,Q1 budget
+stationery,1,Returning,2,2,3,,11.78,Q1 budget
+stationery,2,First-time,2,1,2,6.9,11.07,Q2
+stationery,2,Returning,0,0,2,,,Q2
+stationery,3,First-time,2,1,2,26.2,22.95,Q3
+stationery,3,Returning,0,0,1,,,Q3
+stationery,4,First-time,0,0,0,,,Q4 premium
+stationery,4,Returning,1,0,0,38.61,,Q4 premium
+unknown,1,First-time,416,102,669,3576.79,1281.34,Q1 budget
+unknown,1,Returning,208,108,616,1166.86,1336.95,Q1 budget
+unknown,2,First-time,2291,748,2729,54755.44,27034.76,Q2
+unknown,2,Returning,860,520,1815,12116.51,18152.22,Q2
+unknown,3,First-time,1347,453,2053,75423.46,37922.76,Q3
+unknown,3,Returning,549,312,1495,19841.09,26520.83,Q3
+unknown,4,First-time,892,265,1954,228082.43,89164.14,Q4 premium
+unknown,4,Returning,411,249,1864,55146.63,92595.48,Q4 premium

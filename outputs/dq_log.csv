@@ -1,0 +1,10 @@
+step,check_name,n_rows,action
+1,Sampled rows,4241074,kept
+2,"Exact duplicate events (same time, type, product, user, session)",2963,dropped
+3,Price <= 0 or missing,6448,dropped
+4,Unknown event_type,0,dropped
+5,Missing category_code,1347268,"kept, labeled ""unknown"""
+6,Missing brand,609025,kept
+7,Missing user_session,0,kept (sessions are rebuilt in 02)
+8,Events outside 2019-10-01..2019-10-31,0,dropped
+9,Clean events after all checks,4231663,analysis table

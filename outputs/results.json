@@ -1,0 +1,402 @@
+{
+  "file_events": 42448764,
+  "file_users": 3022290,
+  "sample_events": 4231663,
+  "sample_users": 302351,
+  "dq_log": [
+    {
+      "step": 1,
+      "check_name": "Sampled rows",
+      "n_rows": 4241074,
+      "action": "kept"
+    },
+    {
+      "step": 2,
+      "check_name": "Exact duplicate events (same time, type, product, user, session)",
+      "n_rows": 2963,
+      "action": "dropped"
+    },
+    {
+      "step": 3,
+      "check_name": "Price <= 0 or missing",
+      "n_rows": 6448,
+      "action": "dropped"
+    },
+    {
+      "step": 4,
+      "check_name": "Unknown event_type",
+      "n_rows": 0,
+      "action": "dropped"
+    },
+    {
+      "step": 5,
+      "check_name": "Missing category_code",
+      "n_rows": 1347268,
+      "action": "kept, labeled \"unknown\""
+    },
+    {
+      "step": 6,
+      "check_name": "Missing brand",
+      "n_rows": 609025,
+      "action": "kept"
+    },
+    {
+      "step": 7,
+      "check_name": "Missing user_session",
+      "n_rows": 0,
+      "action": "kept (sessions are rebuilt in 02)"
+    },
+    {
+      "step": 8,
+      "check_name": "Events outside 2019-10-01..2019-10-31",
+      "n_rows": 0,
+      "action": "dropped"
+    },
+    {
+      "step": 9,
+      "check_name": "Clean events after all checks",
+      "n_rows": 4231663,
+      "action": "analysis table"
+    }
+  ],
+  "event_types": {
+    "view": 4065932,
+    "cart": 90230,
+    "purchase": 75501
+  },
+  "sessions_by_gap": {
+    "10": 840984,
+    "30": 779252,
+    "60": 752293
+  },
+  "sensitivity": {
+    "spearman_10_vs_30": 1.0,
+    "spearman_60_vs_30": 1.0,
+    "cart_to_purchase_by_gap": {
+      "10": 0.4964,
+      "30": 0.5049,
+      "60": 0.5078
+    }
+  },
+  "session_funnel": {
+    "sessions": 779252,
+    "viewed": 779076,
+    "carted": 52134,
+    "purchased": 27206,
+    "any_purchase": 59067
+  },
+  "purchase_skip_share": 0.5588,
+  "overall_cart_to_purchase": 0.5049,
+  "sample_abandoned_value": 9864714.0,
+  "top_leak": {
+    "category": "electronics",
+    "tier": "Q4 premium",
+    "carted": 16208,
+    "cart_to_purchase": 0.5338,
+    "abandoned_value_sample": 6007676.0,
+    "value_share": 0.609,
+    "avg_abandoned_cart_value": 795.09
+  },
+  "abandoned_value_share_by_category": {
+    "electronics": 0.8264,
+    "appliances": 0.0702,
+    "unknown": 0.0456,
+    "computers": 0.0454,
+    "auto": 0.0042
+  },
+  "excess_loss_top": [
+    {
+      "category": "electronics",
+      "tier": "Q4 premium",
+      "cart_to_purchase": 0.5338,
+      "excess_loss_full_store": 4453328.2593
+    },
+    {
+      "category": "electronics",
+      "tier": "Q3",
+      "cart_to_purchase": 0.5376,
+      "excess_loss_full_store": 1128023.8743
+    },
+    {
+      "category": "appliances",
+      "tier": "Q4 premium",
+      "cart_to_purchase": 0.395,
+      "excess_loss_full_store": 509828.1053
+    }
+  ],
+  "simpson": {
+    "found": true,
+    "reversed_pairs": [
+      "Q4 premium vs Q2",
+      "Q4 premium vs Q3"
+    ],
+    "pooled": {
+      "Q1 budget": 0.4079,
+      "Q2": 0.5128,
+      "Q3": 0.5119,
+      "Q4 premium": 0.5155
+    },
+    "mix_adjusted": {
+      "Q1 budget": 0.3938,
+      "Q2": 0.533,
+      "Q3": 0.5051,
+      "Q4 premium": 0.4993
+    }
+  },
+  "tier_robustness": {
+    "category": "electronics",
+    "q4_minus_q2_strict_pp": -3.46,
+    "q4_minus_q2_bound_pp": 0.74,
+    "no_cart_share_q2": 0.3252,
+    "no_cart_share_q4": 0.4325
+  },
+  "customer_split": {
+    "category": "electronics",
+    "first_time_share_of_carts": 0.6392,
+    "strict": {
+      "first_time": 0.4253,
+      "returning": 0.7362
+    },
+    "bound": {
+      "first_time": 0.5478,
+      "returning": 0.825
+    },
+    "gap_strict_pp": 31.08,
+    "gap_bound_pp": 27.72,
+    "gap_by_tier_pp": {
+      "Q1 budget": 26.4,
+      "Q2": 29.3,
+      "Q3": 30.9,
+      "Q4 premium": 32.4
+    },
+    "non_electronics_gap_strict_pp": 28.36
+  },
+  "survival": {
+    "n_first_carts": 50113,
+    "km": [
+      {
+        "group": "All categories",
+        "split": "tier",
+        "level": "Q1 budget",
+        "n": 3696,
+        "bought_by_0.5h": 0.3937,
+        "bought_by_24h": 0.4216,
+        "bought_by_168h": 0.4363
+      },
+      {
+        "group": "All categories",
+        "split": "tier",
+        "level": "Q2",
+        "n": 12147,
+        "bought_by_0.5h": 0.4824,
+        "bought_by_24h": 0.5103,
+        "bought_by_168h": 0.5257
+      },
+      {
+        "group": "All categories",
+        "split": "tier",
+        "level": "Q3",
+        "n": 18377,
+        "bought_by_0.5h": 0.4809,
+        "bought_by_24h": 0.5093,
+        "bought_by_168h": 0.5254
+      },
+      {
+        "group": "All categories",
+        "split": "tier",
+        "level": "Q4 premium",
+        "n": 15893,
+        "bought_by_0.5h": 0.4723,
+        "bought_by_24h": 0.4969,
+        "bought_by_168h": 0.5128
+      },
+      {
+        "group": "electronics",
+        "split": "tier",
+        "level": "Q1 budget",
+        "n": 1242,
+        "bought_by_0.5h": 0.3841,
+        "bought_by_24h": 0.4221,
+        "bought_by_168h": 0.4331
+      },
+      {
+        "group": "electronics",
+        "split": "tier",
+        "level": "Q2",
+        "n": 6940,
+        "bought_by_0.5h": 0.5378,
+        "bought_by_24h": 0.5617,
+        "bought_by_168h": 0.5754
+      },
+      {
+        "group": "electronics",
+        "split": "tier",
+        "level": "Q3",
+        "n": 14116,
+        "bought_by_0.5h": 0.5069,
+        "bought_by_24h": 0.5351,
+        "bought_by_168h": 0.5508
+      },
+      {
+        "group": "electronics",
+        "split": "tier",
+        "level": "Q4 premium",
+        "n": 13269,
+        "bought_by_0.5h": 0.4914,
+        "bought_by_24h": 0.5148,
+        "bought_by_168h": 0.5304
+      },
+      {
+        "group": "electronics",
+        "split": "buyer",
+        "level": "First-time",
+        "n": 25306,
+        "bought_by_0.5h": 0.4203,
+        "bought_by_24h": 0.4488,
+        "bought_by_168h": 0.4645
+      },
+      {
+        "group": "electronics",
+        "split": "buyer",
+        "level": "Returning",
+        "n": 10261,
+        "bought_by_0.5h": 0.7064,
+        "bought_by_24h": 0.7259,
+        "bought_by_168h": 0.7398
+      }
+    ],
+    "logrank_p_tier_target": 6.194769651856876e-17,
+    "logrank_p_buyer_target": 0.0,
+    "share_of_7d_purchases_within_10s": 0.0064,
+    "share_of_7d_purchases_within_5m": 0.8064,
+    "share_of_7d_purchases_within_30m": 0.9187,
+    "share_of_7d_purchases_after_24h": 0.0289,
+    "median_minutes_to_purchase_buyers": 1.75,
+    "target": {
+      "category": "electronics",
+      "buyer": "First-time",
+      "n_first_carts_sample": 25306,
+      "avg_cart_price": 398.47,
+      "p0_7day": 0.4645
+    }
+  },
+  "model": {
+    "n_sessions": 209302,
+    "n_test": 65191,
+    "test_base_rate": 0.0986,
+    "pr_auc": 0.3864,
+    "roc_auc": 0.7852,
+    "best_iteration": 120,
+    "top_decile_precision": 0.4087,
+    "top_decile_lift": 4.15,
+    "top_features": {
+      "prior_purchase_sessions": 0.3276999890804291,
+      "n_view": 0.1949000060558319,
+      "max_price": 0.1843000054359436,
+      "hour": 0.1688999980688095,
+      "prior_sessions": 0.14399999380111694,
+      "n_products": 0.12269999831914902
+    },
+    "target_population": {
+      "n_test_sessions": 20832,
+      "base_rate": 0.0986,
+      "pr_auc": 0.3457,
+      "roc_auc": 0.7639,
+      "purchase_rate_by_score_tercile": {
+        "low": 0.0338,
+        "mid": 0.0593,
+        "high": 0.2028
+      }
+    }
+  },
+  "experiment": {
+    "population": "first-time buyers carting electronics",
+    "p0_7day": 0.4645,
+    "monthly_carts": 253060,
+    "weekly_carts": 57142,
+    "avg_cart_price": 398.47,
+    "value_per_pp_month": 1008368.0,
+    "power_table": [
+      {
+        "mde_pp": 1.0,
+        "share_of_gap": 0.036,
+        "relative_lift": 0.0215,
+        "n_per_arm": 39097,
+        "weeks": 2
+      },
+      {
+        "mde_pp": 1.5,
+        "share_of_gap": 0.054,
+        "relative_lift": 0.0323,
+        "n_per_arm": 17386,
+        "weeks": 2
+      },
+      {
+        "mde_pp": 2.0,
+        "share_of_gap": 0.072,
+        "relative_lift": 0.0431,
+        "n_per_arm": 9785,
+        "weeks": 2
+      },
+      {
+        "mde_pp": 3.0,
+        "share_of_gap": 0.108,
+        "relative_lift": 0.0646,
+        "n_per_arm": 4352,
+        "weeks": 2
+      }
+    ]
+  },
+  "impact": {
+    "scenarios": [
+      {
+        "scenario": "low",
+        "reach": 0.85,
+        "share_of_gap_closed": 0.02,
+        "margin": 0.1,
+        "lift_pp": 0.55,
+        "incremental_revenue": 471412.0,
+        "gross_profit": 47141.0
+      },
+      {
+        "scenario": "base",
+        "reach": 0.92,
+        "share_of_gap_closed": 0.05,
+        "margin": 0.15,
+        "lift_pp": 1.39,
+        "incremental_revenue": 1289501.0,
+        "gross_profit": 193425.0
+      },
+      {
+        "scenario": "high",
+        "reach": 1.0,
+        "share_of_gap_closed": 0.1,
+        "margin": 0.2,
+        "lift_pp": 2.77,
+        "incremental_revenue": 2793180.0,
+        "gross_profit": 558636.0
+      }
+    ],
+    "mc_revenue": {
+      "p10": 631878.0,
+      "p50": 1421135.0,
+      "p90": 2350158.0
+    },
+    "mc_gross_profit": {
+      "p10": 89162.0,
+      "p50": 208071.0,
+      "p90": 365595.0
+    },
+    "mc_lift_pp": {
+      "p10": 0.68,
+      "p50": 1.53,
+      "p90": 2.52
+    },
+    "assumptions": {
+      "share_of_gap_closed": "triangular 0 / 5% / 12%",
+      "reach": "uniform 85\u2013100%",
+      "margin": "triangular 8 / 15 / 22%",
+      "gap_pp": 27.72
+    }
+  }
+}
